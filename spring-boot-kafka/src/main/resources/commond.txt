@@ -1,0 +1,11 @@
+启动：
+/usr/local/kafka_2.11-0.11.0.0/bin/kafka-server-start.sh /usr/local/kafka_2.11-0.11.0.0/config/server.properties &
+查看主题：
+/usr/local/kafka_2.11-0.11.0.0/bin/kafka-topics.sh --zookeeper linux1:2181 --list
+创建主题：
+/usr/local/kafka_2.11-0.11.0.0/bin/kafka-topics.sh --zookeeper linux1:2181 --create --replication-factor 3 --partitions 3 --topic test1
+--topic 定义 topic 名
+--replication-factor 定义副本数
+--partitions 定义分区数
+删除主题：
+/usr/local/kafka_2.11-0.11.0.0/bin/kafka-topics.sh --zookeeper linux1:2181 --delete --topic test2
